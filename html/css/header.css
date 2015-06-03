@@ -1,0 +1,25 @@
+.header .logo {
+	margin: 20px;
+	display: block;
+}
+.header .logo img{
+	height: 50px;
+}
+.header .navbar {
+	background-color: #282828;
+	border: none;
+	border-radius: 0;
+	margin-bottom: 0;
+}
+.header .navbar a{ 
+	color: #fff;
+}
+.header .navbar a:hover{
+	color: #585858;
+} 
+.header .navbar .dropdown ul li a {
+	color: #383838;
+}
+.header .navbar-form {
+	margin: 30px;
+}
