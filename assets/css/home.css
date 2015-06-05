@@ -1,0 +1,46 @@
+.carousel-control {
+	background-image: none;
+}
+.carousel {
+	margin: 10px 0;
+}
+.group-item {
+	margin-bottom: 30px;
+	display: block;
+	overflow: hidden;
+}
+.group-item .group-title{
+	background: -webkit-linear-gradient(left, #700000 , #fff); /* For Safari 5.1 to 6.0 */
+  	background: -o-linear-gradient(right, #700000, #fff); /* For Opera 11.1 to 12.0 */
+  	background: -moz-linear-gradient(right, #700000, #fff); /* For Firefox 3.6 to 15 */
+  	background: linear-gradient(to right, #700000 , #fff); /* Standard syntax */
+  	padding: 15px 30px; 
+  	
+}
+.group-item .group-title a{
+	color: #fff;
+}
+.group-item .item .img-item {
+	border-bottom: 1px solid #282828;
+	display: block;
+	height: 250px;
+}
+.group-item .item .img-item img{ 
+
+	width: 95%;
+}
+.group-item .item .title-item {
+	color: #999;
+	font-size: 16px;
+	margin: 10px 0;
+	display: block;
+}
+.group-item .item .title-item:hover {
+	text-decoration: none;
+	opacity: 0.8;
+}
+
+.group-item .item .price-item {
+	font-size: 20px;
+	font-weight: bold;
+}
