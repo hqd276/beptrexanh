@@ -1,13 +1,10 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/news.css">
-<div class="bg-white">
+<div class="container bg-white">
 	<h3 class="text-uppercase"><strong><?php echo $item['title']?></strong> </h3>
 	<hr>
 	<a href="<?php echo base_url()?>" class="">Home</a> / <a href="<?php echo base_url().'danh-muc/'. $cat['slug']?>"><?php echo $cat['name']?></a>
 	<hr>
-	<div class="col-md-4">
-		<?php //echo $template['partials']['left']; ?>
-	</div>
-	<div class="col-md-8 news-detail">
+	<div class="news-detail">
 		<p class="description"><i><strong> <?php echo $item['description']?></strong></i></p>
 		<hr>
 		<?php if($item['image']!=''){?>

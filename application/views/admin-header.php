@@ -17,7 +17,7 @@
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		  <ul class="nav navbar-nav text-uppercase">
-		  	<!--
+		  	
 		    <li class="dropdown">
 	          	<a href="#" class="dropdown-toggle" data-toggle="dropdown">News <span class="caret"></span></a>
 	          	<ul class="dropdown-menu text-capitalize" role="menu">
@@ -26,7 +26,7 @@
                   	<li><a href="<?php echo base_url('admin/news/add/0');?>">Add new News</a></li>
 	          	</ul>
 	        </li>
-	        -->
+	        
 	        <li class="dropdown">
 	          	<a href="#" class="dropdown-toggle" data-toggle="dropdown">Product <span class="caret"></span></a>
 	          	<ul class="dropdown-menu text-capitalize" role="menu">
@@ -58,7 +58,7 @@
 	          	<ul class="dropdown-menu text-capitalize" role="menu">
 	          		<!-- <li><a href="<?php echo base_url();?>admin/support">Supports</a></li>
 	          		<li><a href="<?php echo base_url();?>admin/booking">Booking</a></li> -->
-	          		<li><a href="<?php echo base_url();?>admin/setting/1">Pages</a></li>
+	          		<li><a href="<?php echo base_url();?>admin/page">Pages</a></li>
 	          		<li><a href="<?php echo base_url();?>admin/setting">Settings</a></li>
 	          	</ul>
           	</li>

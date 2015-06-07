@@ -52,6 +52,12 @@ class News extends MX_Controller {
 			$data['title'] = $category['name'];
 			$data['description'] = $category['description'];
 			$list_news = $this->modelnews->getNews(array('category_id'=>$category['id']),' LIMIT 0,5');
+			if($list_news){
+				foreach ($list_news as $key => $value) {
+					if(!$value['image'])
+						$list_news[$key]['image'] = 'Bep_dun_vien_nhien_lieu_Tre_xanh_2.JPG';
+				}
+			}
 		}
 
 		$data['list_news'] = $list_news;

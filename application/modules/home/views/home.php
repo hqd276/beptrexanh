@@ -46,6 +46,7 @@
 	    <span class="sr-only">Next</span>
 	  </a>
 	</div>
+	<!--
 	<?php	foreach ($categories as $key => $value) {?>
 	<div class="group-item text-center">
 		<h3 class="group-title text-uppercase text-left col-sm-6">
@@ -65,4 +66,5 @@
 		}?>
 	</div>
 	<?php }?>
+	-->
 </div>

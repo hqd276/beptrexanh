@@ -27,6 +27,7 @@
 			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			      <ul class="nav navbar-nav text-uppercase">
 			      	<li><a href="/"> <i class="fa fa-home"></i> </a></li>
+			        <!--
 			        <li class="dropdown">
 			        	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Danh mục sản phẩm <span class="caret"></span></a>
 				          <ul class="dropdown-menu text-capitalize" role="menu">
@@ -35,9 +36,13 @@
 			      			}?>
 				          </ul>
 			        </li>
-			        <li><a href="#">Thông tin vận chuyển</a></li>
-			        <li><a href="#">Chính sách bảo hành</a></li>
-			        <li><a href="#">Hình thức thanh toán</a></li>
+			        -->
+			        <li><a href="http://ccbm.com.vn/">Về chúng tôi CCBM</a></li>
+			        <li><a href="<?php echo base_url('/danh-muc/bep-dun')?>">Bếp đun</a></li>
+			        <li><a href="<?php echo base_url('/danh-muc/vien-nhien-lieu')?>">Viên nhiên liệu</a></li>
+			        <li><a href="<?php echo base_url('/danh-muc/ho-tro')?>">Hỗ trợ</a></li>
+			        <li><a href="<?php echo base_url('/danh-muc/tin-tuc')?>">Tin tức</a></li>
+			        <li><a href="<?php echo base_url('/contact')?>">Liên hệ</a></li>
 			      </ul>
 			      
 			    </div><!-- /.navbar-collapse -->
