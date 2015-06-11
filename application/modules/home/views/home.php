@@ -1,5 +1,5 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/home.css">
-<div class="container">
+<div class="container-fluid">
 	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 	  <!-- Indicators -->
 	  <!-- <ol class="carousel-indicators">
@@ -10,30 +10,14 @@
 
 	  <!-- Wrapper for slides -->
 	  <div class="carousel-inner" role="listbox">
-	    <div class="item active">
-	      <img src="<?php echo base_url('/assets/images/1.jpg')?>" alt="...">
-	      <div class="carousel-caption">
-	        Tiệc nướng ngoài trời
-	      </div>
+	    <?php foreach ($banners as $key => $value){?>
+	  	<div class="item <?php echo ($key==0)?"active":"" ?>" >
+	    	<img src="<?php echo base_url("uploads/banner/".$value['image']); ?>">
+	    	<div class="carousel-caption">
+	        	
+	      	</div>
 	    </div>
-	    <div class="item">
-	      <img src="<?php echo base_url('/assets/images/2.jpg')?>" alt="...">
-	      <div class="carousel-caption">
-	        Tiệc nướng ngoài trời
-	      </div>
-	    </div>
-	    <div class="item">
-	      <img src="<?php echo base_url('/assets/images/3.jpg')?>" alt="...">
-	      <div class="carousel-caption">
-	        Tiệc nướng ngoài trời
-	      </div>
-	    </div>
-	    <div class="item">
-	      <img src="<?php echo base_url('/assets/images/4.jpg')?>" alt="...">
-	      <div class="carousel-caption">
-	        Tiệc nướng ngoài trời
-	      </div>
-	    </div>
+	   	<?php } ?>
 	  </div>
 
 	  <!-- Controls -->
@@ -46,6 +30,8 @@
 	    <span class="sr-only">Next</span>
 	  </a>
 	</div>
+</div>
+<div class="container">
 	<!--
 	<?php	foreach ($categories as $key => $value) {?>
 	<div class="group-item text-center">

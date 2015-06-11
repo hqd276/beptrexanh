@@ -37,11 +37,10 @@
 				          </ul>
 			        </li>
 			        -->
-			        <li><a href="http://ccbm.com.vn/">Về chúng tôi CCBM</a></li>
-			        <li><a href="<?php echo base_url('/danh-muc/bep-dun')?>">Bếp đun</a></li>
-			        <li><a href="<?php echo base_url('/danh-muc/vien-nhien-lieu')?>">Viên nhiên liệu</a></li>
-			        <li><a href="<?php echo base_url('/danh-muc/ho-tro')?>">Hỗ trợ</a></li>
-			        <li><a href="<?php echo base_url('/danh-muc/tin-tuc')?>">Tin tức</a></li>
+			        <li><a href="http://ccbm.com.vn/">Về chúng tôi Nagoya Việt Nam</a></li>
+			        <?php	foreach ($cat_news as $key => $value) {
+	      				echo "<li><a href='".base_url().'danh-muc/'.$value['slug']."'>".$value['name']."</a></li>";
+	      			}?>
 			        <li><a href="<?php echo base_url('/contact')?>">Liên hệ</a></li>
 			      </ul>
 			      

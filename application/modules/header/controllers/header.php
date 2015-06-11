@@ -12,8 +12,19 @@ class Header extends MX_Controller{
 		$this->load->model('admin/modelnews');
 		$data = array();
 		
-		$categories = $this->modelcategory->getCategories(array('status'=>1));
-		$data['categories'] = $categories;
+		$cat_news = array();
+		$cat_product = array();
+		$categories = $this->modelcategory->getCategories(array('status'=>1),null," ORDER BY `order`");
+		
+		foreach ($categories as $key => $value) {
+			if ($value['type']==1){
+				$cat_product[] = $value;
+			}else if ($value['type']==0){
+				$cat_news[] = $value;
+			}
+		}
+		$data['cat_news'] = $cat_news;
+		$data['cat_product'] = $cat_product;
 
 		$data['page'] = $page;
 

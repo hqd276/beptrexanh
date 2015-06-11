@@ -4,6 +4,9 @@
 .carousel {
 	margin: 10px 0;
 }
+.carousel-inner>.item>img {
+	width: 100%;
+}
 .group-item {
 	margin-bottom: 30px;
 	display: block;

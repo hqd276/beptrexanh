@@ -6,7 +6,7 @@ class ModelCategory extends CI_Model{
 		parent::__construct(); 
 	} 
 
-	function getCategories($where = null,$limit = null) {
+	function getCategories($where = null,$limit = null,$order = null) {
 		$strWhere = "";
 		if (is_array($where)) {
 			foreach ($where as $key => $value) {
@@ -17,7 +17,7 @@ class ModelCategory extends CI_Model{
 		if ($limit!=null) 
 			$strLimit = $limit;
 
-		$query = $this->db->query("SELECT * FROM $this->_name WHERE 1=1 $strWhere $strLimit ");
+		$query = $this->db->query("SELECT * FROM $this->_name WHERE 1=1 $strWhere $strLimit $order");
 		return $query->result_array();
 	}
 

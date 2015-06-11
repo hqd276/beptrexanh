@@ -14,7 +14,8 @@ class Home extends MX_Controller{
 		$this->template->set_partial('right','right',$dataR);
 
 		$data = array();
-		
+
+		$this->load->model('admin/modelbanner');
 		$this->load->model('admin/modelproduct');
 		$this->load->model('admin/modelcategory');
 
@@ -24,6 +25,9 @@ class Home extends MX_Controller{
 			$categories[$key]['list_product'] = $list_product;
 		}
 		$data['categories'] = $categories;
+
+		$banners = $this->modelbanner->getBanner(array('position'=>0));
+		$data['banners'] = $banners;
 
 		$this->template->build('home',$data);
 	}

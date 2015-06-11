@@ -3,9 +3,9 @@
 <div class="container contact-form bg-white">
 	<div class="col-sm-4">
 		<h2 class="text-uppercase"><?php echo $setting['contact']['data']->name;?></h2>
-		<p>
+		<div>
 			<?php echo $setting['contact']['data']->detail;?>
-		</p>
+		</div>
 	</div>
 	<form class="form-horizontal  col-sm-8" role="form" method="post" action="<?php echo base_url();?>contact">
 		<div class="form-group">

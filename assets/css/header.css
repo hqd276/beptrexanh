@@ -13,6 +13,8 @@
 }
 .header .navbar a{ 
 	color: #fff;
+	padding: 10px;
+	line-height: 30px;
 }
 .header .navbar a:hover{
 	color: #585858;
