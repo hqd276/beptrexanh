@@ -15,9 +15,7 @@ class Home extends MX_Controller{
 
 		$data = array();
 
-		$this->load->model('admin/modelbanner');
-		$this->load->model('admin/modelproduct');
-		$this->load->model('admin/modelcategory');
+		$this->load->model(array('admin/modelbanner','admin/modelproduct','admin/modelcategory','admin/modelgallery'));
 
 		$categories = $this->modelcategory->getCategories(array('status'=>1,'type'=>1));
 		foreach ($categories as $key => $value) {
@@ -28,6 +26,9 @@ class Home extends MX_Controller{
 
 		$banners = $this->modelbanner->getBanner(array('position'=>0));
 		$data['banners'] = $banners;
+
+		$gallery = $this->modelgallery->getGallery(array('status'=>1));
+		$data['gallery'] = $gallery;
 
 		$this->template->build('home',$data);
 	}

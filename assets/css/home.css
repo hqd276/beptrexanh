@@ -47,3 +47,25 @@
 	font-size: 20px;
 	font-weight: bold;
 }
+.gallery-home .group-title{
+	background: -webkit-linear-gradient(left, #700000 , #fff); /* For Safari 5.1 to 6.0 */
+  	background: -o-linear-gradient(right, #700000, #fff); /* For Opera 11.1 to 12.0 */
+  	background: -moz-linear-gradient(right, #700000, #fff); /* For Firefox 3.6 to 15 */
+  	background: linear-gradient(to right, #700000 , #fff); /* Standard syntax */
+  	padding: 15px 30px; 
+  	color: #fff;
+}
+.gallery-home .thumbnail {
+	height: 150px;
+	overflow: hidden;
+	position: relative;
+	padding: 0;
+}
+.gallery-home .thumbnail .caption {
+	position: absolute;
+	line-height: 30px;
+	color: #fff;
+	background-color: rgba(0, 0, 0, 0.5);
+	width: 100%;
+	bottom: 0;
+}

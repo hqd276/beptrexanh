@@ -28,16 +28,16 @@ class Gallery extends MX_Controller{
 		}
 		$this->load->model(array('modelcategory'));
 		$gallery = $this->modelgallery->getGallery(null," LIMIT ".$begin.",".($item_per_page+1));
-		if (count($gallery)>0) {
-			foreach ($gallery as $key => $value) {
-				if ($value['category_id']>0){
-					$category = $this->modelcategory->getCategoryById($value['category_id']);
-					$gallery[$key]['category'] = $category['name'];
-				}else {
-					$gallery[$key]['category'] = '';
-				}
-			}
-		}
+		// if (count($gallery)>0) {
+		// 	foreach ($gallery as $key => $value) {
+		// 		if ($value['category_id']>0){
+		// 			$category = $this->modelcategory->getCategoryById($value['category_id']);
+		// 			$gallery[$key]['category'] = $category['name'];
+		// 		}else {
+		// 			$gallery[$key]['category'] = '';
+		// 		}
+		// 	}
+		// }
 
 		if (count($gallery)>$item_per_page){
 			$data['next'] = $page + 1;
@@ -60,7 +60,8 @@ class Gallery extends MX_Controller{
 		$this->load->helper(array('form')); 
 		$this->load->helper(array('util')); 
 
-		$dataC = array('category_id' =>'',
+		$dataC = array(
+						// 'category_id' =>'',
 						'title' =>'',
 						'image' =>'',
 						'order' =>'',
@@ -69,7 +70,7 @@ class Gallery extends MX_Controller{
 		if ($this->input->post('submit') == "ok") {
 			$dataC['title'] = $this->input->post('title'); 
 			$dataC['order'] = $this->input->post('order'); 
-			$dataC['category_id'] = $this->input->post('category_id'); 
+			// $dataC['category_id'] = $this->input->post('category_id'); 
 
 			if ($this->input->post('status'))
 				$dataC['status'] = 1;
@@ -89,11 +90,11 @@ class Gallery extends MX_Controller{
 				}
 			}
 		}
-		$this->load->model(array('modelcategory'));
+		// $this->load->model(array('modelcategory'));
 
-		$category = $this->modelcategory->getCategories();
+		// $category = $this->modelcategory->getCategories();
 
-		$data['category_box'] = $this->category_box($category, $dataC);
+		// $data['category_box'] = $this->category_box($category, $dataC);
 
 		$data['item'] = $dataC;
 		$this->template->build('addgallery',$data);
@@ -113,7 +114,7 @@ class Gallery extends MX_Controller{
 		if ($this->input->post('submit') == "ok") {
 			$dataC['title'] = $this->input->post('title'); 
 			$dataC['order'] = $this->input->post('order'); 
-			$dataC['category_id'] = $this->input->post('category_id'); 
+			// $dataC['category_id'] = $this->input->post('category_id'); 
 
 			if ($this->input->post('status'))
 				$dataC['status'] = 1;
@@ -136,11 +137,11 @@ class Gallery extends MX_Controller{
 				$data['b_Check']= false;
 			}
 		}
-		$this->load->model(array('modelcategory'));
+		// $this->load->model(array('modelcategory'));
 
-		$category = $this->modelcategory->getCategories(array("type"=>0));
+		// $category = $this->modelcategory->getCategories(array("type"=>0));
 
-		$data['category_box'] = $this->category_box($category, $dataC);
+		// $data['category_box'] = $this->category_box($category, $dataC);
 
 		$data['item'] = $dataC;
 		$this->template->build('addgallery',$data);

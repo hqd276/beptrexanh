@@ -33,7 +33,7 @@
 </div>
 <div class="container">
 	<!--
-	<?php	foreach ($categories as $key => $value) {?>
+	<?php foreach ($categories as $key => $value) {?>
 	<div class="group-item text-center">
 		<h3 class="group-title text-uppercase text-left col-sm-6">
 			<a href="<?php echo base_url('danh-muc/'.$value['slug'])?>"> 
@@ -53,4 +53,23 @@
 	</div>
 	<?php }?>
 	-->
+	<div class="gallery-home">
+		<h3 class="group-title text-uppercase text-left col-sm-6">
+			Thư viện ảnh
+		</h3>
+		<div class="clearfix"></div>
+		<marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
+			<?php foreach ($gallery as $key => $value) {?>
+	            <div class="col-xs-6 col-md-3">
+	                <div class="thumbnail">
+	                    <img src="<?php echo base_url("uploads/gallery/thumbs/".$value['image']); ?>" class="img-responsive">
+	                    <div class="caption text-center">
+	                        <h4><?php echo $value['title'] ?></h4>
+	                    </div>
+	                </div>
+	          </div>
+	        <?php }
+	        ?>
+        </marquee>
+	</div>
 </div>
