@@ -58,18 +58,44 @@
 			Thư viện ảnh
 		</h3>
 		<div class="clearfix"></div>
-		<marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
-			<?php foreach ($gallery as $key => $value) {?>
-	            <div class="col-xs-6 col-md-3">
-	                <div class="thumbnail">
-	                    <img src="<?php echo base_url("uploads/gallery/thumbs/".$value['image']); ?>" class="img-responsive">
-	                    <div class="caption text-center">
-	                        <h4><?php echo $value['title'] ?></h4>
-	                    </div>
+		<div class="carousel slide" id="galleryCarousel">
+		  <div class="carousel-inner">
+		  	<?php foreach ($gallery as $key => $value) {?>
+	            <div class="item <?php echo ($key==0)?"active":"" ?>">
+			      <div class="col-lg-2">
+			      	<a href="#"><img src="<?php echo base_url("uploads/gallery/thumbs/".$value['image']); ?>" class="img-responsive"></a>
+			      	<div class="caption text-center">
+	                    <h4><?php echo $value['title'] ?></h4>
 	                </div>
-	          </div>
+			      </div>
+			    </div>
 	        <?php }
 	        ?>
-        </marquee>
+		  </div>
+		  <a class="left carousel-control" href="#galleryCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+		  <a class="right carousel-control" href="#galleryCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+		</div>
 	</div>
 </div>
+<script type="text/javascript">
+$('#galleryCarousel').carousel({
+  interval: 4000
+})
+
+$('.gallery-home .carousel .item').each(function(){
+  var next = $(this).next();
+  if (!next.length) {
+    next = $(this).siblings(':first');
+  }
+  next.children(':first-child').clone().appendTo($(this));
+  
+  for (var i=0;i<3;i++) {
+    next=next.next();
+    if (!next.length) {
+    	next = $(this).siblings(':first');
+  	}
+    
+    next.children(':first-child').clone().appendTo($(this));
+  }
+});
+</script>

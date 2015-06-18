@@ -30,6 +30,9 @@ class News extends MX_Controller{
 		$news = $this->modelnews->getNews(array("type"=>$type)," LIMIT ".$begin.",".($item_per_page+1),"created DESC");
 		if (count($news)>0) {
 			foreach ($news as $key => $value) {
+				if(!$value['image'])
+						$news[$key]['image'] = 'Bep_dun_vien_nhien_lieu_Tre_xanh_2.JPG';
+					
 				$category = $this->modelcategory->getCategoryById($value['category_id']);
 				if($category)
 					$news[$key]['category'] = $category["name"];

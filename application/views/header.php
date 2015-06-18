@@ -2,12 +2,12 @@
 
 		<div class="container">
 			<a class="logo pull-left" href="#"><img src="<?php echo base_url('/assets/images/logo.png')?>"></a>
-			<form class="navbar-form pull-right" role="search">
+			<!-- <form class="navbar-form pull-right" role="search">
 		        <div class="form-group">
 		          <input type="text" class="form-control" placeholder="Tìm kiếm">
 		        </div>
 		        <button type="submit" class="btn btn-default">Tìm</button>
-	      	</form>
+	      	</form> -->
       	</div>
 
 			<nav class="navbar">
@@ -37,7 +37,7 @@
 				          </ul>
 			        </li>
 			        -->
-			        <li><a href="http://ccbm.com.vn/">Về chúng tôi Nagoya Việt Nam</a></li>
+			        <li><a href="<?php echo base_url('/about')?>">Về chúng tôi Nagoya Việt Nam</a></li>
 			        <?php	foreach ($cat_news as $key => $value) {
 	      				echo "<li><a href='".base_url().'danh-muc/'.$value['slug']."'>".$value['name']."</a></li>";
 	      			}?>
