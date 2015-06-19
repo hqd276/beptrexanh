@@ -8,8 +8,7 @@ class Header extends MX_Controller{
 	}
 	
 	public function index($page = null){
-		$this->load->model('admin/modelcategory');
-		$this->load->model('admin/modelnews');
+		$this->load->model(array('admin/modelcategory','admin/modelnews','admin/modelvideo'));
 		$data = array();
 		
 		$cat_news = array();
@@ -25,6 +24,9 @@ class Header extends MX_Controller{
 		}
 		$data['cat_news'] = $cat_news;
 		$data['cat_product'] = $cat_product;
+
+		$video = $this->modelvideo->getVideo('',1,'id DESC');
+		$data['video'] = $video[0];
 
 		$data['page'] = $page;
 

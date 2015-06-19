@@ -13,7 +13,7 @@
 <meta property="og:image" content="<?php echo base_url().'uploads/news/'.$item['image']?>" />
 <?php }?>
 <script src="https://code.jquery.com/jquery-1.11.2.js"></script>
-<script src="https://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+<!-- <script src="https://code.jquery.com/ui/1.11.2/jquery-ui.js"></script> -->
 
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
@@ -31,43 +31,6 @@
 </head>
 
 <body>
-<script src="https://apis.google.com/js/platform.js" async defer>
-  {lang: 'vi'}
-</script>
-<script>window.twttr = (function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0],
-    t = window.twttr || {};
-  if (d.getElementById(id)) return t;
-  js = d.createElement(s);
-  js.id = id;
-  js.src = "https://platform.twitter.com/widgets.js";
-  fjs.parentNode.insertBefore(js, fjs);
- 
-  t._e = [];
-  t.ready = function(f) {
-    t._e.push(f);
-  };
- 
-  return t;
-}(document, "script", "twitter-wjs"));</script>
-
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '380779845466004',
-      xfbml      : true,
-      version    : 'v2.3'
-    });
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
 
 <div class="">
   <?php echo $template['partials']['header']; ?>
@@ -79,35 +42,7 @@
   <?php echo $template['partials']['footer']; ?>
 </div>
 
-<script src="<?php echo base_url();?>assets/js/scrollReveal.js"></script>
-<script>
 
-  	// window.sr = new scrollReveal();
-  	$(document).ready(function() {
-        //animation for tablet & laptop screen:
-        var windowsize = $(window).width();
-        if (windowsize > 767) {
-            //if the window is greater than 767px wide then turn on scrollReveal..
-            window.sr = new scrollReveal();
-        }
-    });		
-  	//smooth scrolling
-	$(function() {
-        //$('a[href*=#]:not([href=#])').click(function() {
-        $('.smooth-scroll').click(function() {
-            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                if (target.length) {
-                    $('html,body').animate({
-                        scrollTop: target.offset().top
-                    }, 1000);
-                    return false;
-                }
-            }
-        });
-    });	
-</script>
 </body>
 
 </html>

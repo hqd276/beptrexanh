@@ -1,12 +1,12 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed'); 
 
-class Model extends CI_Model{ 
-	private $_name = 'users';
+class ModelVideo extends CI_Model{ 
+	private $_name = 'video';
 	function __construct(){ 
 		parent::__construct(); 
 	} 
 
-	function getCategories($where = null,$limit = null) {
+	function getVideo($where,$limit = null,$order = null) {
 		$strWhere = "";
 		if (is_array($where)) {
 			foreach ($where as $key => $value) {
@@ -15,21 +15,25 @@ class Model extends CI_Model{
 		}
 		$strLimit = "";
 		if ($limit!=null) 
-			$strLimit = $limit;
+			$strLimit = " LIMIT ".$limit;
 
-		$query = $this->db->query("SELECT * FROM $this->_name WHERE 1=1 $strWhere $strLimit ");
+		$strOrder = "";
+		if ($order!=null) 
+			$strOrder = " ORDER BY ".$order; 
+
+		$query = $this->db->query("SELECT * FROM $this->_name WHERE 1=1 $strWhere $strOrder $strLimit ");
 		return $query->result_array();
 	}
 
-	function insertCategory($data) {
+	function insertVideo($data) {
 		return $this->db->insert($this->_name, $data); 
 	}
-	function updateCategory($id,$data) {
+	function updateVideo($id,$data) {
 		$this->db->where('id', $id);
 		return $this->db->update($this->_name, $data); 
 	}
 
-	function getCategoryById($id){
+	function getVideoById($id){
 		$query = $this->db->query("SELECT * FROM $this->_name WHERE id = ".$id);
 		return $query->row_array();
 	}

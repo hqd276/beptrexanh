@@ -47,6 +47,9 @@
 	        <li>
 	          	<a href="<?php echo base_url();?>admin/gallery">Gallery</a>
           	</li>
+          	<li>
+	          	<a href="<?php echo base_url();?>admin/video">Video</a>
+          	</li>
 	        <li class="dropdown">
 	          	<a href="#" class="dropdown-toggle" data-toggle="dropdown">System <span class="caret"></span></a>
 	          	<ul class="dropdown-menu text-capitalize" role="menu">
