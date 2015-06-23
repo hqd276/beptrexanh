@@ -1,6 +1,6 @@
 <div class="header">
 
-		<div class="container">
+		<div class="container hidden-xs">
 			<a class="logo pull-left" href="#"><img src="<?php echo base_url('/assets/images/logo.png')?>"></a>
 			<!-- <form class="navbar-form pull-right" role="search">
 		        <div class="form-group">

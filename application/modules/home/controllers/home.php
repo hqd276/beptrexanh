@@ -28,6 +28,7 @@ class Home extends MX_Controller{
 		$data['banners'] = $banners;
 
 		$gallery = $this->modelgallery->getGallery(array('status'=>1));
+		
 		$data['gallery'] = $gallery;
 
 		$this->template->build('home',$data);

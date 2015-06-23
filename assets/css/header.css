@@ -25,3 +25,12 @@
 .header .navbar-form {
 	margin: 30px;
 }
+.header .navbar-brand>img {
+	height: 30px;
+}
+.header .navbar-toggle .icon-bar {
+	background-color: #fff;
+}
+.header .navbar-toggle {
+	border: 1px solid #fff;
+}
