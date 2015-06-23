@@ -8,9 +8,11 @@
 
 	<div class="row col-md-12 wrapper-parent">
         <?php foreach ($list_items as $key => $value) {?>
-            <div class="col-xs-6 col-md-3">
+            <div class="col-xs-12 col-md-3">
                 <div class="thumbnail">
-                    <iframe width="100%" height="150" src="https://www.youtube.com/embed/<?php echo $value['link']?>" frameborder="0" allowfullscreen></iframe>
+                    <div class="video-container">
+                        <iframe class="video" width="100%" height="150" src="https://www.youtube.com/embed/<?php echo $value['link']?>" frameborder="0" allowfullscreen></iframe>
+                    </div>
                     <br>
                     <?php echo $value['title']?>
                 </div>
