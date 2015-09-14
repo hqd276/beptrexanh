@@ -1,4 +1,4 @@
-<h1><a class="logo" href="<?php echo base_url('admin');?>"> Administrator</a></h1>
+<h1><a class="logo" href="<?php echo base_url('admin');?>"> Quản trị hệ thống</a></h1>
 
 <nav class="navbar navbar-default " role="navigation">
 
@@ -19,20 +19,20 @@
 		  <ul class="nav navbar-nav text-uppercase">
 		  	
 		    <li class="dropdown">
-	          	<a href="#" class="dropdown-toggle" data-toggle="dropdown">News <span class="caret"></span></a>
+	          	<a href="#" class="dropdown-toggle" data-toggle="dropdown">Tin tức <span class="caret"></span></a>
 	          	<ul class="dropdown-menu text-capitalize" role="menu">
-	          		<li><a href="<?php echo base_url('admin/category/index/0');?>">News Category Manager</a></li>
-                  	<li><a href="<?php echo base_url('admin/news/index/0');?>">News Manager</a></li>
-                  	<li><a href="<?php echo base_url('admin/news/add/0');?>">Add new News</a></li>
+	          		<li><a href="<?php echo base_url('admin/category/index/0');?>">Quản lý danh mục tin</a></li>
+                  	<li><a href="<?php echo base_url('admin/news/index/0');?>">Quản lý tin</a></li>
+                  	<li><a href="<?php echo base_url('admin/news/add/0');?>">Thêm tin mới</a></li>
 	          	</ul>
 	        </li>
 	        
 	        <li class="dropdown">
-	          	<a href="#" class="dropdown-toggle" data-toggle="dropdown">Product <span class="caret"></span></a>
+	          	<a href="#" class="dropdown-toggle" data-toggle="dropdown">Sản phẩm <span class="caret"></span></a>
 	          	<ul class="dropdown-menu text-capitalize" role="menu">
-	          		<li><a href="<?php echo base_url('admin/category/index/1');?>">Product Category Manager</a></li>
-                  	<li><a href="<?php echo base_url('admin/product/index/0');?>">Product Manager</a></li>
-                  	<li><a href="<?php echo base_url('admin/product/add/0');?>">Add new Product</a></li>
+	          		<li><a href="<?php echo base_url('admin/category/index/1');?>">Quản lý danh mục sản phẩm</a></li>
+                  	<li><a href="<?php echo base_url('admin/product/index/0');?>">Quản lý sản phẩm</a></li>
+                  	<li><a href="<?php echo base_url('admin/product/add/0');?>">Thêm sản phẩm mới</a></li>
 	          	</ul>
 	        </li>
 	        <!-- <li>
@@ -42,28 +42,28 @@
 	        	<a href="<?php echo base_url();?>admin/member">Member</a>
 	        </li> -->
 	        <li>
-	        	<a href="<?php echo base_url();?>admin/banner">Slide Show</a>
+	        	<a href="<?php echo base_url();?>admin/banner">Ảnh trang chủ</a>
 	        </li>
 	        <li>
-	          	<a href="<?php echo base_url();?>admin/gallery">Gallery</a>
+	          	<a href="<?php echo base_url();?>admin/gallery">Thư viện ảnh</a>
           	</li>
           	<li>
-	          	<a href="<?php echo base_url();?>admin/video">Video</a>
+	          	<a href="<?php echo base_url();?>admin/video">Quản lý video</a>
           	</li>
 	        <li class="dropdown">
-	          	<a href="#" class="dropdown-toggle" data-toggle="dropdown">System <span class="caret"></span></a>
+	          	<a href="#" class="dropdown-toggle" data-toggle="dropdown">Hệ thống <span class="caret"></span></a>
 	          	<ul class="dropdown-menu text-capitalize" role="menu">
-	          		<li><a href="<?php echo base_url();?>admin/support">Supports</a></li>
+	          		<li><a href="<?php echo base_url();?>admin/support">Quản lý liên hệ</a></li>
 	          		<!-- <li><a href="<?php echo base_url();?>admin/booking">Booking</a></li> -->
 	          		<!-- <li><a href="<?php echo base_url();?>admin/page">Pages</a></li> -->
-	          		<li><a href="<?php echo base_url();?>admin/setting">Settings</a></li>
+	          		<li><a href="<?php echo base_url();?>admin/setting">Cài đặt hệ thống</a></li>
 	          	</ul>
           	</li>
 		  </ul>
 		</div><!-- /.navbar-collapse -->
 		<div class="user-info text-right col-md-4">
-			Hi <span><strong><?php echo $user['email'];?></strong></span>!
-			<a href="<?php echo base_url();?>logout">Logout</a> 
+			Chào <span><strong><?php echo $user['email'];?></strong></span>!
+			<a href="<?php echo base_url();?>logout">Thoát</a> 
 		</div>
 	</div><!-- /.container-fluid -->
 </nav>
