@@ -1,0 +1,55 @@
+.product-form h2 {
+	color: #5ecdd4;
+}
+.product-form .item {
+	padding: 20px 0;
+	display: block;
+  overflow: hidden;
+}
+.product-form .item a{
+	text-decoration: none;
+}
+.product-form .item .price {
+	font-size: 24px;
+}
+.product-form .item .price strong{
+	color: #B40404;
+}
+.product-form .item img {
+}
+.product-form .item span {
+	color: #d9bb4b;
+}
+.product-form .item h4 {
+	color: #5ecdd4;
+}
+.product-form .item h4:hover {
+	color: #d9bb4b;
+	cursor: pointer;
+}
+.product-form .item p {
+	color: #787878;
+}
+
+.product-form .item .more {
+	padding: 10px 20px;
+	color: #fff;
+	background-image: linear-gradient(to bottom,#30373f,#272d33);
+	box-shadow: 1px 2px 0 rgba(0,0,0,0.3);
+	background-repeat:repeat-x;
+}
+
+.product-detail .col-md-12 {
+	margin: 20px 0;
+}
+.product-detail .tab-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.product-detail .glyphicon {
+	margin: 0 10px;
+}
+.product-detail .detail img {
+  max-width: 100%;
+}

@@ -5,6 +5,8 @@
 	<a href="<?php echo base_url()?>" class="">Home</a> / <a href="<?php echo base_url().'danh-muc-san-pham/'. $cat['slug']?>"><?php echo $cat['name']?></a>
 	<hr>
 
+	<h2 class="text-uppercase">Giá : <strong><?php echo number_format($item['price'])?></strong> VND</h2>
+	<hr>
 	<div class="col-md-12 news-detail">
 		<p class="description"><i><strong> <?php echo $item['description']?></strong></i></p>
 		<hr>
