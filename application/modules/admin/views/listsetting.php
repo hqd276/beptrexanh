@@ -5,6 +5,7 @@
 		<thead>
 			<th>Id</th>
 			<th>Setting</th>
+			<th>Name</th>
 			<th>Action</th>
 		</thead>
 		<tbody>
@@ -13,6 +14,7 @@
 			<tr>
 				<td><?php echo $item["id"]?></td>
 				<td><?php echo $item["key"]?></td>
+				<td><?php echo $item["name"]?></td>
 				<td>
 					<a href="<?php echo base_url("edit-setting/".$item["id"]);?>" class="btn btn-default"> Edit </a>
 				</td>

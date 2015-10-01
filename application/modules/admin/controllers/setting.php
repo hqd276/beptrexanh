@@ -25,7 +25,8 @@ class Setting extends MX_Controller{
 		$setting = $this->modelsetting->getSetting(array('type'=>$type));
 		if (count($setting)>0) {
 			foreach ($setting as $key => $value) {
-				# code...
+				$item = json_decode($value['value']);
+				$setting[$key]['name'] = $item->name;
 			}
 		}
 		$data['list'] = $setting;
