@@ -20,18 +20,6 @@
 			</div>
 		</div>
 		<div class="form-group col-sm-12">
-			<label for="inputEmail3" class="col-sm-2 control-label">Job</label>
-			<div class="col-sm-10">
-			  	<input type="" class="form-control" id="inputEmail3" name="job" placeholder="Job" value="<?php echo $item['job']; ?>">
-			</div>
-		</div>
-		<div class="form-group col-sm-12">
-			<label for="inputEmail3" class="col-sm-2 control-label">Position</label>
-			<div class="col-sm-10">
-			  	<input type="" class="form-control" id="inputEmail3" name="position" placeholder="Position" value="<?php echo $item['position']; ?>">
-			</div>
-		</div>
-		<div class="form-group col-sm-12">
 			<label for="inputEmail3" class="col-sm-2 control-label">Name</label>
 			<div class="col-sm-10">
 			  	<input type="" class="form-control" id="inputEmail3" name="name" placeholder="Name" value="<?php echo $item['name']; ?>">
